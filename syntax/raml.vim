@@ -8,13 +8,12 @@ endif
 
 " Keywords
 syn match ramlVersion '#%RAML.*$'
-syn keyword namedParameters title baseUri version
-syn keyword namedParameters schemas resourceTypes traits
-syn keyword namedParameters description queryParameters responses
-syn keyword namedParameters body example is displayName type required
-syn keyword methods get post put delete
 syn match types '\v(string|integer|int|boolean|date|number)\ze\n'
 syn match genericKey '\w\{-}\ze:\(\s\|\n\)'
+syn match namedParameters '\v(title|baseUri|version|schemas|resourceTypes|traits)\ze:'
+syn match namedParameters '\v(description|queryParameters|responses|body|example)\ze:'
+syn match namedParameters '\v(is|displayName|type|required)\ze:'
+syn match methods '\v(get|post|put|delete)\ze:'
 syn match resource '\/.\{-}\ze:'
 syn match responseCode '\d\d\d\ze:'
 syn match stringLiteral '\".\{-}\"'
@@ -32,5 +31,5 @@ hi def link types Type
 hi def link responseCode Comment
 hi def link resource Special
 hi def link genericKey Constant
-hi def link genericKey String
+hi def link stringLiteral String
 hi def link responseType Identifier
