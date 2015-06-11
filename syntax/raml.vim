@@ -13,9 +13,9 @@ syn keyword namedParameters schemas resourceTypes traits
 syn keyword namedParameters description queryParameters responses
 syn keyword namedParameters body example is displayName type required
 syn keyword methods get post put delete
-syn keyword types string integer int boolean date number
+syn match types '\v(string|integer|int|boolean|date|number)\ze\n'
 syn match genericKey '\w\{-}\ze:\(\s\|\n\)'
-syn match resource '\/\w\{-}\ze:'
+syn match resource '\/.\{-}\ze:'
 syn match responseCode '\d\d\d\ze:'
 syn match stringLiteral '\".\{-}\"'
 syn match responseType 'application\/json'
