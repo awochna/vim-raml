@@ -20,10 +20,12 @@ syn match responseCode '\d\d\d\ze:'
 syn match stringLiteral '\".\{-}\"'
 syn match responseType 'application\/json'
 syn match responseType 'application\/xml'
+syn match comment '#.*$'
 
 let b:current_syntax = "raml"
 
 hi def link ramlVersion Comment
+hi def link comment Comment
 hi def link namedParameters Statement
 hi def link methods Type
 hi def link types Type
