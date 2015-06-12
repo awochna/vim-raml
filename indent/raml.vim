@@ -10,14 +10,14 @@ set cpo&vim
 
 let b:did_indent = 1
 
-setlocal indentexpr=GetYAMLIndent(v:lnum)
+setlocal indentexpr=GetRAMLIndent(v:lnum)
 setlocal indentkeys=!^F,o,O,0#,0},0],<:>,-
 setlocal nosmartindent
 
 let b:undo_indent = 'setlocal indentexpr< indentkeys< smartindent<'
 
 " Only define the function once.
-if exists('*GetYAMLIndent')
+if exists('*GetRAMLIndent')
     finish
 endif
 
@@ -53,7 +53,7 @@ let s:mapkeyregex='\v^\s*%(\''%([^'']|'''')*\'''.
                 \        '|%(%(\:\ )@!.)*)\:%(\ |$)'
 let s:liststartregex='\v^\s*%(\-%(\ |$))'
 
-function GetYAMLIndent(lnum)
+function GetRAMLIndent(lnum)
     if a:lnum == 1 || !prevnonblank(a:lnum-1)
         return 0
     endif
