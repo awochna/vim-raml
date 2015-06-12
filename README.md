@@ -13,4 +13,6 @@ Just put this project in your `~/.vim/bundle/` directory after installing pathog
 If you have suggestions for improvement, please submit an issue.
 Bonus points for submitting a pull request instead!
 
+## Credits ##
 
+Some of the code used in this repository comes from [Kenneth Feng](https://github.com/kennethzfeng).
